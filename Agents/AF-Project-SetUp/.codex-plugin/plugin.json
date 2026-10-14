@@ -1,0 +1,26 @@
+{
+  "author": {
+    "email": "shtachenko@gmail.com",
+    "name": "Alexander Shtachenko"
+  },
+  "description": "A gated workflow agent that discovers game prototype requirements, proposes and documents a technology stack, and deploys only after explicit approval.",
+  "interface": {
+    "capabilities": [
+      "Interactive"
+    ],
+    "category": "Developer Tools",
+    "defaultPrompt": [
+      "Start AF-Project-SetUp for this game project. Begin with discovery; do not deploy before the approved specification and plan.",
+      "Review the current project and identify missing technical requirements before recommending a stack.",
+      "Validate an approved deployment plan and report risks, prerequisites, and the next safe step."
+    ],
+    "developerName": "Alexander Shtachenko",
+    "displayName": "AF-Project-SetUp",
+    "longDescription": "AF-Project-SetUp reads project documentation, interviews the user about game and platform requirements, proposes a justified client/server stack, writes an implementation specification and deployment plan, and performs controlled deployment after approvals.",
+    "shortDescription": "Set up game prototypes"
+  },
+  "keywords": [],
+  "name": "af-project-setup",
+  "skills": "./skills",
+  "version": "0.1.0"
+}

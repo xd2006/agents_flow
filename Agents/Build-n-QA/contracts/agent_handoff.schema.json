@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "title": "Build-n-QA Developer Handoff",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_agent": {
+      "const": "Developer"
+    },
+    "operation": {
+      "enum": [
+        "FIX_BUGS",
+        "FIX_BUILD"
+      ]
+    },
+    "build_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bug_report_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bugs_json_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bug_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "delivery_status": {
+      "enum": [
+        "PREPARED",
+        "DELIVERED",
+        "ACKNOWLEDGED",
+        "NOT_DELIVERED"
+      ]
+    },
+    "receipt_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "error_message": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "request_id",
+    "task_id",
+    "run_id",
+    "target_agent",
+    "operation",
+    "build_id",
+    "source_revision",
+    "bug_report_path",
+    "bugs_json_path",
+    "evidence_root",
+    "bug_ids",
+    "delivery_status",
+    "receipt_id"
+  ]
+}

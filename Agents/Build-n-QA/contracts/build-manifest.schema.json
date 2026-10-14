@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "title": "Build-n-QA Build Manifest",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "build_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "asset_revisions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unity_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "platform": {
+      "const": "Android"
+    },
+    "build_kind": {
+      "const": "Development APK"
+    },
+    "apk_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "apk_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "build_log_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "build_status": {
+      "const": "SUCCESS"
+    },
+    "original_source_unchanged": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "task_id",
+    "run_id",
+    "build_id",
+    "source_revision",
+    "asset_revisions",
+    "unity_version",
+    "platform",
+    "build_kind",
+    "apk_path",
+    "apk_sha256",
+    "build_log_path",
+    "build_status",
+    "original_source_unchanged"
+  ]
+}

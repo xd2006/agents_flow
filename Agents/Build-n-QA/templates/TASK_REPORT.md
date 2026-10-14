@@ -1,0 +1,26 @@
+# Task Report: <task_id>
+- Agent: Build-n-QA
+- Run: <run_id>
+- Timestamp/timezone: <real timestamp or unavailable>
+- Status: DONE | IN_PROGRESS | BLOCKED | FAILED
+- Goal: ...
+
+## Input versions
+- Source revision: ...
+- GDD revision: ...
+- Asset revision(s): ...
+
+## Work actually performed
+...
+
+## Artifacts created / modified (outside original project)
+- `<real path>` — ...
+
+## Validation
+- Build APK: PASS | FAIL | NOT_RUN
+- Required tests PASS/total: ...
+- Original project not modified by Build-n-QA: PASS | FAIL | UNVERIFIED
+- Developer handoff receipt: `<id or NOT_DELIVERED>`
+
+## Decisions / blockers / next steps
+...

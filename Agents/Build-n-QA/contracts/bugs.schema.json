@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "title": "Build-n-QA Bugs",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "build_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bugs": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "title": "Bug",
+        "type": "object",
+        "properties": {
+          "bug_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "severity": {
+            "enum": [
+              "CRITICAL",
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ]
+          },
+          "type": {
+            "enum": [
+              "GAMEPLAY",
+              "UI",
+              "CRASH",
+              "BUILD",
+              "PERFORMANCE",
+              "OTHER"
+            ]
+          },
+          "test_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "requirement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "expected": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actual": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reproducibility": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "source_revision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "gdd_revision": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "bug_id",
+          "title",
+          "severity",
+          "type",
+          "test_ids",
+          "requirement_ids",
+          "preconditions",
+          "steps",
+          "expected",
+          "actual",
+          "reproducibility",
+          "evidence_refs",
+          "source_revision",
+          "gdd_revision"
+        ]
+      }
+    }
+  },
+  "required": [
+    "task_id",
+    "run_id",
+    "build_id",
+    "bugs"
+  ]
+}

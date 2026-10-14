@@ -1,0 +1,17 @@
+{
+  "name": "prototype-producer",
+  "version": "0.1.0",
+  "description": "Coordinates game prototype preparation from concept and environment through GDD review, development planning, and agent task tracking.",
+  "skills": "./skills",
+  "author": {
+    "name": "Prototype Producer"
+  },
+  "interface": {
+    "displayName": "Продюсер прототипа",
+    "shortDescription": "Планирует игровой прототип и координирует агентов",
+    "longDescription": "Анализирует концепт и окружение проекта, выдаёт задания ГД, проверяет системные ГДД, готовит план разработки и после команды пользователя отслеживает поручения агентам.",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "File handling"],
+    "defaultPrompt": ["Помоги подготовить игровой прототип по концепту и doc/setup/."]
+  }
+}

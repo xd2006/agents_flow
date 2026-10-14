@@ -1,0 +1,21 @@
+# TEMPLATE ONLY. Не рабочая конфигурация. Никаких токенов в YAML.
+runtime_name: REPLACE_ME
+source_project_root: /ABSOLUTE/READ_ONLY/UNITY_PROJECT
+workspace_root: /ABSOLUTE/WRITABLE/OUTSIDE_UNITY_SOURCE
+unity_executable: /PATH/TO/UNITY
+android_sdk_root: /PATH/TO/ANDROID_SDK
+adb_executable: /PATH/TO/ADB
+asset_agent_route: REPLACE_ME
+gdd_agent_route: REPLACE_ME
+developer_agent_route: REPLACE_ME
+runtime_tool_mapping:
+  agent_call: REPLACE_ME
+  shell_exec: REPLACE_ME
+  screen_capture: REPLACE_ME
+  visual_interpretation: REPLACE_ME
+  ui_input: REPLACE_ME
+allowed_test_package_ids: []
+android_target_constraints:
+  minimum_api: null
+  abi: null
+  emulator_name: null
